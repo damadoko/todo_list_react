@@ -1,5 +1,6 @@
 import React from "react";
 import Task from "./Task/Task";
+import classes from "./TaskList.module.css";
 
 export default function TaskList(props) {
   const {
@@ -21,5 +22,5 @@ export default function TaskList(props) {
       filter={filter}
     />
   ));
-  return <div>{titleList}</div>;
+  return <div className={classes.TaskList}>{titleList}</div>;
 }

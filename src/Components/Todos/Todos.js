@@ -3,6 +3,7 @@ import TaskList from "./TaskList/TaskList";
 import AddTask from "./AddTask/AddTask";
 import FilterTasks from "./filterTasks/FilterTasks";
 import RecordTasks from "./RecordTasks/RecordTasks";
+import classes from "./Todos.module.css";
 
 export default function Todos(props) {
   const {
@@ -16,7 +17,7 @@ export default function Todos(props) {
     filter
   } = props;
   return (
-    <div>
+    <div className={classes.Todos}>
       <AddTask addTaskHandler={addTaskHandler} />
       <FilterTasks
         delDoneTaskHandler={delDoneTaskHandler}

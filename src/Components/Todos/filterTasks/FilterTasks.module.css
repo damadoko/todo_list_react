@@ -1,0 +1,30 @@
+.Filter {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex !important;
+  text-align: right;
+  justify-content: space-between;
+}
+
+.FilterBtn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #61c08d;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.Clear {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #61c08d;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+.Clear:hover {
+  transform: scale(1.1);
+}

@@ -1,7 +1,49 @@
 .Hide {
-  display: none;
+  display: none !important;
 }
 
 .Done {
-  color: gray;
+  color: #d2d2d2 !important;
+}
+
+.Show {
+  display: inline-block !important;
+}
+
+.Task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #d2d2d2;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  color: #61c08d;
+}
+
+.Task:hover {
+  transform: translateZ(10px) translateX(5px);
+  font-weight: bold;
+}
+
+.Task:last-child {
+  border-bottom: none;
+}
+
+.TaskContent {
+  margin-left: 2rem;
+  overflow: hidden;
+  text-align: justify;
+  border: 0;
+  background: transparent;
+  font-size: 1.25rem;
+  color: inherit;
+}
+
+.TaskWraper {
+  display: flex;
+  max-width: 80%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

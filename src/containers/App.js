@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Todos from "../Components/Todos/Todos";
+import Header from "../Components/LayOut/Header/Header";
 
 export default class App extends Component {
   constructor(props) {
@@ -94,6 +95,7 @@ export default class App extends Component {
     const data = { ...this.state };
     data.filter = filter;
     this.setState(data);
+    localStorage.setItem("DATA_LOCAL", JSON.stringify(data));
   };
 
   // Change status
@@ -109,18 +111,21 @@ export default class App extends Component {
   render() {
     const { taskItems, filter } = this.state;
     return (
-      <div className="container">
-        <Todos
-          tasksArr={taskItems}
-          addTaskHandler={this.addTaskHandler}
-          delTaskHandler={this.delTaskHandler}
-          updateTaskHandler={this.updateTaskHandler}
-          delDoneTaskHandler={this.delDoneTaskHandler}
-          changeFilterHandler={this.changeFilterHandler}
-          changeStatusHandler={this.changeStatusHandler}
-          filter={filter}
-        />
-      </div>
+      <Fragment>
+        <Header />
+        <div className="container">
+          <Todos
+            tasksArr={taskItems}
+            addTaskHandler={this.addTaskHandler}
+            delTaskHandler={this.delTaskHandler}
+            updateTaskHandler={this.updateTaskHandler}
+            delDoneTaskHandler={this.delDoneTaskHandler}
+            changeFilterHandler={this.changeFilterHandler}
+            changeStatusHandler={this.changeStatusHandler}
+            filter={filter}
+          />
+        </div>
+      </Fragment>
     );
   }
 }

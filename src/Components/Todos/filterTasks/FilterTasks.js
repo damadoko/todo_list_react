@@ -1,23 +1,42 @@
 import React from "react";
+import classes from "./FilterTasks.module.css";
 
 export default function FilterTasks(props) {
   const { delDoneTaskHandler, changeFilterHandler } = props;
 
   return (
-    <div>
-      <button type="button" onClick={delDoneTaskHandler}>
+    <div className={classes.Filter}>
+      <button
+        className={classes.Clear}
+        type="button"
+        onClick={delDoneTaskHandler}
+      >
         Clear Done Tasks
       </button>
-      <label>Filter by:</label>
-      <button type="button" onClick={() => changeFilterHandler("all")}>
-        All
-      </button>
-      <button type="button" onClick={() => changeFilterHandler("done")}>
-        Done
-      </button>
-      <button type="button" onClick={() => changeFilterHandler("remain")}>
-        Remain
-      </button>
+      <div>
+        <label>Filter by:</label>
+        <button
+          className={classes.FilterBtn}
+          type="button"
+          onClick={() => changeFilterHandler("all")}
+        >
+          All
+        </button>
+        <button
+          className={classes.FilterBtn}
+          type="button"
+          onClick={() => changeFilterHandler("done")}
+        >
+          Done
+        </button>
+        <button
+          className={classes.FilterBtn}
+          type="button"
+          onClick={() => changeFilterHandler("remain")}
+        >
+          Remain
+        </button>
+      </div>
     </div>
   );
 }

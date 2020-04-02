@@ -10,11 +10,12 @@
 }
 
 /* Reset */
-
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
   font-family: monserat !important;
 }
 
@@ -26,4 +27,14 @@ a {
 .container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.fa-times {
+  color: #d2d2d2;
+  margin-right: 0.5rem;
+  transition: all 0.25s ease-in-out;
+  display: none;
+}
+.fa-times:hover {
+  transform: rotate(90deg) scale(1.5);
 }

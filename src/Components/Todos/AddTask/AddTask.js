@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./AddTask.module.css";
 
 export default function AddTask(props) {
   const { addTaskHandler } = props;
@@ -17,9 +18,18 @@ export default function AddTask(props) {
   //   e.target.value = "";
   // };
   return (
-    <div>
-      <input type="text" onChange={getInputString} onKeyDown={handleKeyDown} />
-      <button type="button" onClick={e => addTaskHandler(inputString, e)} />
+    <div className={classes.AddTask}>
+      <input
+        className={classes.Input}
+        type="text"
+        onChange={getInputString}
+        onKeyDown={handleKeyDown}
+      />
+      <button
+        className={classes.Add}
+        type="button"
+        onClick={e => addTaskHandler(inputString, e)}
+      />
     </div>
   );
 }
