@@ -1,27 +1,12 @@
 import React, { Component, Fragment } from "react";
 import Todos from "../Components/Todos/Todos";
 import Header from "../Components/LayOut/Header/Header";
+import DataMockUp from "./_DataMockup";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = JSON.parse(localStorage.getItem("DATA_LOCAL")) || {
-      taskItems: [
-        { id: 0, title: "Code App", isDone: true },
-        {
-          id: 1,
-          title: "Code another App",
-          isDone: false
-        },
-        {
-          id: 2,
-          title: "Code another App again!",
-          isDone: false
-        }
-      ],
-      filter: "all" //all, done, remain
-    };
+    this.state = JSON.parse(localStorage.getItem("DATA_LOCAL")) || DataMockUp;
 
     localStorage.setItem("DATA_LOCAL", JSON.stringify(this.state));
   }
