@@ -3,12 +3,18 @@ import Todos from "../Components/Todos/Todos";
 import Header from "../Components/LayOut/Header/Header";
 import DataMockUp from "./_DataMockup";
 
+const getInitData =
+  JSON.parse(localStorage.getItem("DATA_LOCAL")) || DataMockUp;
+
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = JSON.parse(localStorage.getItem("DATA_LOCAL")) || DataMockUp;
+    this.state = getInitData;
+  }
 
-    localStorage.setItem("DATA_LOCAL", JSON.stringify(this.state));
+  componentDidMount() {
+    const initData = { ...this.state };
+    localStorage.setItem("DATA_LOCAL", JSON.stringify(initData));
   }
 
   // Add Task
@@ -94,6 +100,7 @@ export default class App extends Component {
   };
 
   render() {
+    console.log("rendering");
     const { taskItems, filter } = this.state;
     return (
       <Fragment>
