@@ -10,6 +10,19 @@ export default function TaskList(props) {
     filter,
     changeStatusHandler
   } = props;
+
+  const noTaskAvailable = () => {
+    if (tasksArr.length === 0) {
+      return (
+        <p className={classes.Alert}>
+          There're no task available, please add your task!
+        </p>
+      );
+    } else {
+      return <p></p>;
+    }
+  };
+
   const titleList = tasksArr.map(item => (
     <Task
       title={item.title}
@@ -22,5 +35,9 @@ export default function TaskList(props) {
       filter={filter}
     />
   ));
-  return <div className={classes.TaskList}>{titleList}</div>;
+  return (
+    <div className={classes.TaskList}>
+      {titleList} {noTaskAvailable()}
+    </div>
+  );
 }

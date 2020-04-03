@@ -11,6 +11,10 @@
   color: #030303;
 }
 
+.Input:focus {
+  outline: none;
+}
+
 .Add {
   position: relative;
   width: 50px;
@@ -55,4 +59,8 @@
 
 .Add:hover::after {
   transform: translateY(-2px) rotate(270deg);
+}
+
+.Add:focus {
+  outline: none;
 }

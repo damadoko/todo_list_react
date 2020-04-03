@@ -23,6 +23,7 @@ export default function Todos(props) {
         delDoneTaskHandler={delDoneTaskHandler}
         tasksArr={tasksArr}
         changeFilterHandler={changeFilterHandler}
+        filter={filter}
       />
       <TaskList
         tasksArr={tasksArr}

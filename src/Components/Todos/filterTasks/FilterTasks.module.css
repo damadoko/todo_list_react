@@ -16,6 +16,18 @@
   border-radius: 5px;
 }
 
+.FilterBtn:focus {
+  outline: none;
+}
+
+.Disabled {
+  background-color: #d2d2d2 !important;
+}
+
+.Current {
+  background-color: #629b7d;
+}
+
 .Clear {
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -27,4 +39,8 @@
 
 .Clear:hover {
   transform: scale(1.1);
+}
+
+.Clear:focus {
+  outline: none;
 }

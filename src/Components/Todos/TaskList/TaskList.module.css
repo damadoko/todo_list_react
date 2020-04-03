@@ -6,3 +6,9 @@
   margin: 1rem 0;
   width: 100%;
 }
+
+.Alert {
+  color: #d2d2d2;
+  font-weight: bold;
+  margin-top: 20px;
+}
