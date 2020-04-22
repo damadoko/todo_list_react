@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/todo_list_react/static/css/main.16b63477.chunk.css",
+    "main.js": "/todo_list_react/static/js/main.06a3a20c.chunk.js",
+    "main.js.map": "/todo_list_react/static/js/main.06a3a20c.chunk.js.map",
+    "runtime-main.js": "/todo_list_react/static/js/runtime-main.e854c5de.js",
+    "runtime-main.js.map": "/todo_list_react/static/js/runtime-main.e854c5de.js.map",
+    "static/js/2.d0d95f7d.chunk.js": "/todo_list_react/static/js/2.d0d95f7d.chunk.js",
+    "static/js/2.d0d95f7d.chunk.js.map": "/todo_list_react/static/js/2.d0d95f7d.chunk.js.map",
+    "index.html": "/todo_list_react/index.html",
+    "precache-manifest.1836defd8fcc9630aaae11985e57cbeb.js": "/todo_list_react/precache-manifest.1836defd8fcc9630aaae11985e57cbeb.js",
+    "service-worker.js": "/todo_list_react/service-worker.js",
+    "static/css/main.16b63477.chunk.css.map": "/todo_list_react/static/css/main.16b63477.chunk.css.map",
+    "static/js/2.d0d95f7d.chunk.js.LICENSE.txt": "/todo_list_react/static/js/2.d0d95f7d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/todo_list_react/static/media/Montserrat-Regular.ee653992.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e854c5de.js",
+    "static/js/2.d0d95f7d.chunk.js",
+    "static/css/main.16b63477.chunk.css",
+    "static/js/main.06a3a20c.chunk.js"
+  ]
+}
